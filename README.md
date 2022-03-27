@@ -2,7 +2,7 @@
 
 a collection of experiments, writings, and other nonsense
 
-# Reference Notes
+## Reference Notes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
