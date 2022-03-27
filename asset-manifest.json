@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shenaniganthology/static/css/main.06126c1b.css",
-    "main.js": "/shenaniganthology/static/js/main.5da6f692.js",
+    "main.css": "/shenaniganthology/static/css/main.30611ec4.css",
+    "main.js": "/shenaniganthology/static/js/main.b8ae922a.js",
     "static/js/787.699c3cfa.chunk.js": "/shenaniganthology/static/js/787.699c3cfa.chunk.js",
     "static/media/duck.svg": "/shenaniganthology/static/media/duck.cc16c1577a4fe06c7f5db3a12e48c223.svg",
     "index.html": "/shenaniganthology/index.html",
-    "main.06126c1b.css.map": "/shenaniganthology/static/css/main.06126c1b.css.map",
-    "main.5da6f692.js.map": "/shenaniganthology/static/js/main.5da6f692.js.map",
+    "main.30611ec4.css.map": "/shenaniganthology/static/css/main.30611ec4.css.map",
+    "main.b8ae922a.js.map": "/shenaniganthology/static/js/main.b8ae922a.js.map",
     "787.699c3cfa.chunk.js.map": "/shenaniganthology/static/js/787.699c3cfa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06126c1b.css",
-    "static/js/main.5da6f692.js"
+    "static/css/main.30611ec4.css",
+    "static/js/main.b8ae922a.js"
   ]
 }
