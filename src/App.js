@@ -6,6 +6,7 @@ import Studies from "./pages/Studies";
 import Main from "./pages/Main";
 import Musings from "./pages/Musings";
 import Pictures from "./pages/Pictures";
+import React from "react";
 
 function App() {
   return (

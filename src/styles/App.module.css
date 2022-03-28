@@ -19,7 +19,6 @@
 
 .container {
   padding: 0 2rem;
-  background-color: rgb(238, 238, 238);
   height: 100%;
 }
 
@@ -37,11 +36,12 @@
   display: flex;
   flex: 1;
   padding: 1.5rem 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 4px solid #eaeaea;
   justify-content: left;
   align-items: center;
-  bottom: 0;
   position: absolute;
+  background: #eeeeee;
+  width: 100%;
 }
 
 .footer a {
