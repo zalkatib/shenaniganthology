@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>hello world;</h1>
+      <h1 className={styles.title}>hello world</h1>
 
-      <h3 className={styles.description}>🖋💻📚☕⛈</h3>
+      <h3 className={styles.description}>🖋💻📚☕📸⛈</h3>
 
       <div className={styles.grid}>
         <Link
