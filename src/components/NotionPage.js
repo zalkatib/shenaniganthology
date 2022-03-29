@@ -9,7 +9,7 @@ const NotionPage = ({ pageId }) => {
 
   const loadPage = React.useCallback(() => {
     setLoading(true);
-    loadNotionContent(pageId)
+    loadNotionContent('page', pageId)
       .then((res) => {
         console.log(res);
         setPage(res.data);
@@ -17,11 +17,12 @@ const NotionPage = ({ pageId }) => {
       .finally(() => {
         setLoading(false);
       });
-  });
+  }, [pageId]);
 
   useEffect(() => {
     if (loading === null) loadPage();
-  }, [loadPage]);
+  }, [loading, loadPage]);
+
   return (
     <div className="content">{page && <NotionRenderer blockMap={page} />}</div>
   );

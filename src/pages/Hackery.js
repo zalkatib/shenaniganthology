@@ -1,11 +1,47 @@
-import React from "react";
+import React , {useEffect} from "react";
 import NotionPage from "../components/NotionPage";
+import { loadNotionContent } from "../utils/utils";
+import styles from '../styles/App.module.css'
 
 const Hackery = () => {
-  const pageId = "33718b6c06e14802bf85861220f112d1";
+  const tableId = "76e7706a62cd4e33981650a9bfea1264?v=6ea897791a8742229b30f3bfa4d4e5d7";
+
+  const [loading, setLoading] = React.useState(null);
+  const [table, setTable] = React.useState(null);
+  
+  const loadTable = React.useCallback(() => {
+    setLoading(true);
+    loadNotionContent('table', tableId)
+      .then((res) => {
+        console.log(res);
+        setTable(res.data);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (loading === null) loadTable();
+  }, [loading, loadTable]);
+
+
+  function pageList() {
+    return (
+      <div>
+        {table.map(({ id }) => (
+        <div className={styles.notionContent} >
+          <NotionPage key={id} pageId={id}/>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div style={{ height: "100%" }}>
-      <NotionPage pageId={pageId} />
+      <h2 style={{ borderBottom: "#005a83 2px dashed", marginBottom: 0}}>failing early and often</h2>
+     {table && pageList()}
     </div>
   );
 };
