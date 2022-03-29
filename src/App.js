@@ -14,19 +14,19 @@ function App() {
       <div className={styles.container}>
         <div className={styles.main}>
           <Switch>
-            <Route exact path="/shenaniganthology">
+            <Route exact path="/shenaniganthology/">
               <Main />
             </Route>
-            <Route path="*/hackery">
+            <Route path="/shenaniganthology/hackery">
               <Hackery />
             </Route>
-            <Route path="*/studies">
+            <Route path="/shenaniganthology/studies">
               <Studies />
             </Route>
-            <Route path="*/musings">
+            <Route path="/shenaniganthology/musings">
               <Musings />
             </Route>
-            <Route path="*/pictures">
+            <Route path="/shenaniganthology/pictures">
               <Pictures />
             </Route>
           </Switch>
