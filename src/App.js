@@ -10,30 +10,30 @@ import React from "react";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/shenaniganthology">
       <div className={styles.container}>
         <div className={styles.main}>
           <Switch>
-            <Route exact path="/shenaniganthology/">
+            <Route key={0} exact path="/">
               <Main />
             </Route>
-            <Route path="/shenaniganthology/hackery">
+            <Route key={1} path="/hackery">
               <Hackery />
             </Route>
-            <Route path="/shenaniganthology/studies">
+            <Route key={2} path="/studies">
               <Studies />
             </Route>
-            <Route path="/shenaniganthology/musings">
+            <Route key={3} path="/musings">
               <Musings />
             </Route>
-            <Route path="/shenaniganthology/pictures">
+            <Route key={4} path="/pictures">
               <Pictures />
             </Route>
           </Switch>
         </div>
       </div>
       <footer className={styles.footer}>
-        <img className={styles.ducklogo} src={logo} width={80} />
+        <img className={styles.ducklogo} src={logo} alt={'duck'} width={80} />
       </footer>
     </Router>
   );

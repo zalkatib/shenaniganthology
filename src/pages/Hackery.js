@@ -30,8 +30,8 @@ const Hackery = () => {
     return (
       <div>
         {table.map(({ id }) => (
-        <div className={styles.notionContent} >
-          <NotionPage key={id} pageId={id}/>
+        <div key={id} className={styles.notionContent} >
+          <NotionPage  pageId={id}/>
           </div>
         ))}
       </div>
@@ -39,7 +39,7 @@ const Hackery = () => {
   }
 
   return (
-    <div style={{ height: "100%" }}>
+    <div className={styles.hackeryContent}>
       <h2 style={{ borderBottom: "#005a83 2px dashed", marginBottom: 0}}>failing early and often</h2>
      {table && pageList()}
     </div>

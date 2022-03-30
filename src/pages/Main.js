@@ -11,7 +11,7 @@ const Main = () => {
 
       <div className={styles.grid}>
         <Link
-          to="/shenaniganthology/hackery"
+          to="/hackery"
           className={styles.card}
           style={{ textAlign: "right" }}
         >
@@ -24,7 +24,7 @@ const Main = () => {
           <p>attempts to do things</p>
         </Link> */}
 
-        <Link to="/shenaniganthology/musings" className={styles.card}>
+        <Link to="/musings" className={styles.card}>
           <h2>musings</h2>
           <p>miscellany and miniutiae</p>
         </Link>

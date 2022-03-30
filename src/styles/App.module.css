@@ -137,9 +137,22 @@
     width: 100%;
     flex-direction: column;
   }
+  .hackeryContent {
+    width: -webkit-fill-available;
+  }
 }
 
 .notionContent {
   margin-bottom: 10px;
   padding:10px;
+  align-items: left;
+}
+
+figure {
+  width: 85% !important;
+}
+
+.hackeryContent {
+  height: 100%;
+  width: 80%;
 }
