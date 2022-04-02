@@ -7,12 +7,14 @@ import Main from "./pages/Main";
 import Musings from "./pages/Musings";
 import Pictures from "./pages/Pictures";
 import React from "react";
+import ColorSchemeToggle from "./components/ColorSchemeToggle";
 
 function App() {
   return (
     <Router basename="/shenaniganthology">
       <div className={styles.container}>
         <div className={styles.main}>
+          <ColorSchemeToggle />
           <Switch>
             <Route key={0} exact path="/">
               <Main />
@@ -33,7 +35,7 @@ function App() {
         </div>
       </div>
       <footer className={styles.footer}>
-        <img className={styles.ducklogo} src={logo} alt={'duck'} width={80} />
+        <img className={styles.ducklogo} src={logo} alt={"duck"} width={100} />
       </footer>
     </Router>
   );

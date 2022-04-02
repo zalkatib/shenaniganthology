@@ -19,5 +19,50 @@ html,
 body,
 #root {
   min-height: 100%;
-  background-color: rgb(238, 238, 238);
+}
+body {
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
+  --color-shadow: #aaa;
+  --color-hover: #005a83;
+  --color-code: rgb(247, 246, 243);
+
+  --image-grayscale: 0;
+  --image-opacity: 100%;
+}
+body.dark {
+  --color-background: #004152;
+  --color-foreground: #efefef;
+  --color-shadow: rgba(0, 0, 0, 0.8);
+  --color-hover: rgb(74 199 186 / 80%);
+  --color-code: rgb(76 76 76);
+
+  --image-grayscale: 50%;
+  --image-opacity: 90%;
+}
+
+img,
+video {
+  filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+}
+
+.react-toggle-track > * {
+  line-height: 9px !important;
+  font-size: 13px;
+}
+
+.react-toggle-track-check {
+  left: 6px !important;
+}
+
+.react-toggle-track-x {
+  right: 12px !important;
+}
+
+.notion {
+  color: var(--color-foreground) !important;
+}
+
+.notion-code {
+  background-color: var(--color-code) !important;
 }

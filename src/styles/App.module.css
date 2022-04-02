@@ -1,6 +1,6 @@
 @media (prefers-reduced-motion: no-preference) {
   .ducklogo {
-    animation: duck-logo-spin infinite 2.5s linear;
+    animation: duck-logo-spin infinite 3s linear;
   }
 
   .ducklogo:hover {
@@ -17,9 +17,14 @@
   }
 }
 
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
 .container {
   padding: 0 2rem;
   height: 100%;
+  flex: 1;
 }
 
 .main {
@@ -35,20 +40,14 @@
 .footer {
   display: flex;
   flex: 1;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   border-top: 4px solid #eaeaea;
   justify-content: left;
   align-items: center;
   position: absolute;
   background: #eeeeee;
   width: 100%;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .title a {
@@ -112,8 +111,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #005a83;
-  border-color: #005a83;
+  color: var(--color-hover);
+  border-color: var(--color-hover);
 }
 
 .card h2 {
@@ -138,21 +137,26 @@
     flex-direction: column;
   }
   .hackeryContent {
-    width: -webkit-fill-available;
+    width: -webkit-fill-available !important;
   }
 }
 
 .notionContent {
-  margin-bottom: 10px;
-  padding:10px;
-  align-items: left;
+  padding: 0 50px 50px 10px;
+  border-bottom: #005a83 2px dashed;
+  color: var(--color-foreground) !important;
 }
 
 figure {
-  width: 85% !important;
+  width: 100% !important;
+  padding: 10px !important;
 }
 
 .hackeryContent {
   height: 100%;
-  width: 80%;
+  align-self: start;
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
 }
