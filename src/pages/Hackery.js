@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NotionPage from "../components/NotionPage";
 import { loadNotionContent } from "../utils/utils";
-import styles from "../styles/App.module.css";  
+import styles from "../styles/App.module.css";
 
 const Hackery = () => {
   const tableId =
@@ -55,11 +55,17 @@ const Hackery = () => {
 
   return (
     <div>
-      <h1 style={{ borderBottom: "#005a83 2px dashed", marginBottom: "10px" }}>
+      <h1
+        style={{
+          borderBottom: "var(--color-hover) 2px dashed",
+          margin: 0,
+          padding: "10px",
+        }}
+      >
         failing early and often
       </h1>
       <div className={styles.hackeryContent}>
-        <div style={{ borderRight: "#005a83 2px dashed" }}>
+        <div style={{ borderRight: "var(--color-hover) 2px dashed" }}>
           <h2 style={{ marginBottom: 0, paddingRight: "50px" }}>
             in writing form. but with absolutely no helpful pagination or
             anything
