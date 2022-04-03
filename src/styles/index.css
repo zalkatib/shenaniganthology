@@ -45,16 +45,3 @@ img,
 video {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
-
-.react-toggle-track > * {
-  line-height: 9px !important;
-  font-size: 13px;
-}
-
-.react-toggle-track-check {
-  left: 6px !important;
-}
-
-.react-toggle-track-x {
-  right: 12px !important;
-}
