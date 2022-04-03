@@ -31,11 +31,11 @@ body {
   --image-opacity: 100%;
 }
 body.dark {
-  --color-background: #004152;
+  --color-background: #06303a;
   --color-foreground: #efefef;
   --color-shadow: rgba(0, 0, 0, 0.8);
   --color-hover: rgb(74 199 186 / 80%);
-  --color-code: rgb(76 76 76);
+  --color-code: rgb(0 37 46);
 
   --image-grayscale: 50%;
   --image-opacity: 90%;
@@ -57,12 +57,4 @@ video {
 
 .react-toggle-track-x {
   right: 12px !important;
-}
-
-.notion {
-  color: var(--color-foreground) !important;
-}
-
-.notion-code {
-  background-color: var(--color-code) !important;
 }
