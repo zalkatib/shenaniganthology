@@ -7,14 +7,18 @@ import styled from "styled-components";
 const Content = styled.div`
   .notion {
     color: var(--color-foreground) !important;
+    font-size: 14px;
     a {
-      color: var(--color-foreground) !important;
+      color: var(--color-foreground);
+    }
+    .notion-code {
+      background-color: var(--color-code-background);
+    }
+    .notion-inline-code,
+    .notion-inline-code .notion-link {
+      color: var(--color-code-highlight) !important;
     }
   }
-  .notion-code {
-    background-color: var(--color-code) !important;
-  }
-  font-size: 300px;
 `;
 
 const NotionPage = ({ pageId }) => {

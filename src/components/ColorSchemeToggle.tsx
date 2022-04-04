@@ -8,9 +8,11 @@ const ToggleContainer = styled.div`
   display: flex;
   justify-content: end;
   margin-top: 2rem;
-  .react-toggle-track > * {
-    line-height: 9px !important;
-    font-size: 13px;
+  .react-toggle-track {
+    > * {
+      line-height: 9px !important;
+      font-size: 13px;
+    }
     &-check {
       left: 6px !important;
     }

@@ -57,7 +57,7 @@ const Hackery = () => {
     <div>
       <h1
         style={{
-          borderBottom: "var(--color-hover) 2px dashed",
+          borderBottom: "var(--color-hover) 1px dashed",
           margin: 0,
           padding: "10px",
         }}
@@ -65,7 +65,7 @@ const Hackery = () => {
         failing early and often
       </h1>
       <div className={styles.hackeryContent}>
-        <div style={{ borderRight: "var(--color-hover) 2px dashed" }}>
+        <div style={{ borderRight: "var(--color-hover) 1px dashed" }}>
           <h2 style={{ marginBottom: 0, paddingRight: "50px" }}>
             in writing form. but with absolutely no helpful pagination or
             anything
