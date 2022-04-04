@@ -7,7 +7,9 @@ const Main = () => {
     <main className={styles.main}>
       <h1 className={styles.title}>hello world</h1>
 
-      <h3 className={styles.description}>🖋💻📚☕📸⛈</h3>
+      <h4 className={styles.description}>
+        far too much symmetry happening here
+      </h4>
 
       <div className={styles.grid}>
         <Link
@@ -15,12 +17,12 @@ const Main = () => {
           className={styles.card}
           style={{ textAlign: "right" }}
         >
-          <h2>hackery</h2>
+          <h2>hackery 💻</h2>
           <p>experiments and projects</p>
         </Link>
 
         <Link to="/musings" className={styles.card}>
-          <h2>musings</h2>
+          <h2>🖋 musings</h2>
           <p>miscellany and miniutiae</p>
         </Link>
       </div>
