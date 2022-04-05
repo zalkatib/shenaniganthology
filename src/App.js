@@ -13,8 +13,8 @@ function App() {
   return (
     <Router basename="/shenaniganthology">
       <div className={styles.container}>
+        <ColorSchemeToggle />
         <div className={styles.main}>
-          <ColorSchemeToggle />
           <Switch>
             <Route key={0} exact path="/">
               <Main />
