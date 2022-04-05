@@ -37,7 +37,7 @@ body {
 *   primary-dark: #000814;
 *  greens:
 *   secondary: #4ca492;
-*   secondary-light: #7ed6c2;
+*   secondary-light: #7ed6c2; or perhaps #a8cdc2 
 *   secondary-dark: #107564;
 *
 */
@@ -56,10 +56,10 @@ body {
 body.dark {
   --color-background: #06303a;
   --color-foreground: #f1f1f1b8;
-  --color-hover: #107564;
+  --color-hover: #a8cdc2;
   --color-button: #107564;
   --color-code-background: #06242b;
-  --color-code-highlight: #7ed6c2;
+  --color-code-highlight: #a8cdc2;
   --image-grayscale: 50%;
   --image-opacity: 90%;
 }
