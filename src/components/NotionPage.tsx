@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import * as React from "react";
 import { loadNotionContent } from "../utils/utils";
 import { NotionRenderer } from "react-notion";
 import "react-notion/src/styles.css";
@@ -26,7 +26,7 @@ const Content = styled.div`
   }
 `;
 
-const NotionPage = ({ pageId }) => {
+const NotionPage: React.FC<{ pageId }> = ({ pageId }) => {
   const [loading, setLoading] = React.useState(null);
   const [page, setPage] = React.useState(null);
 
@@ -42,7 +42,7 @@ const NotionPage = ({ pageId }) => {
       });
   }, [pageId]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (loading === null) loadPage();
   }, [loading, loadPage]);
 

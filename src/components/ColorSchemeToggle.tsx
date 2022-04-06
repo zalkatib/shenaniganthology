@@ -1,7 +1,7 @@
-import React from "react";
+import * as React from "react";
 import Toggle from "react-toggle";
 import "react-toggle/style.css";
-import { useColorScheme } from "./useColorScheme";
+import { useColorScheme } from "../utils/useColorScheme";
 import styled from "styled-components";
 
 const ToggleContainer = styled.div`

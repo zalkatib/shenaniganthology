@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "../styles/App.module.css";
+import * as React from "react";
 import { Link } from "react-router-dom";
+import styles from "../styles/App.module.css";
 
-const Main = () => {
+const Main: React.FC = () => {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>hello world</h1>
