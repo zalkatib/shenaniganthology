@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
+import * as React from "react";
 import NotionPage from "../components/NotionPage";
 import { loadNotionContent } from "../utils/utils";
 import styles from "../styles/App.module.css";
 
-const Hackery = () => {
+const Hackery: React.FC = () => {
   const tableId =
     "76e7706a62cd4e33981650a9bfea1264?v=6ea897791a8742229b30f3bfa4d4e5d7";
 
   const [loadingTable, setLoadingTable] = React.useState(null);
-  const [loadingPages, setLoadingPages] = React.useState(null);
   const [table, setTable] = React.useState(null);
-  const [pages, setPages] = React.useState([]);
 
   const loadTable = React.useCallback(() => {
     setLoadingTable(true);
@@ -24,24 +22,11 @@ const Hackery = () => {
       });
   }, []);
 
-  const loadPages = React.useCallback(() => {
-    setLoadingPages(true);
-    table.forEach((element) => {
-      pages.push(loadNotionContent("page", element.id).then((res) => res.data));
-    });
-    setLoadingPages(false);
-  }, [table, pages]);
-
-  useEffect(() => {
+  React.useEffect(() => {
     if (loadingTable === null) loadTable();
-    if (table && loadingPages === null) {
-      loadPages();
-    }
-  }, [table, loadingTable, loadingPages, loadTable, loadPages]);
+  }, [table, loadingTable, loadTable]);
 
   function pageList() {
-    console.log(table);
-    console.log(pages);
     return (
       <div>
         {table.map(({ id }) => (
