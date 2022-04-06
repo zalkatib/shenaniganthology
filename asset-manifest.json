@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/shenaniganthology/static/css/main.b75b7712.css",
-    "main.js": "/shenaniganthology/static/js/main.848d7f8f.js",
+    "main.js": "/shenaniganthology/static/js/main.3c7e66ac.js",
     "static/js/787.699c3cfa.chunk.js": "/shenaniganthology/static/js/787.699c3cfa.chunk.js",
     "static/media/duck.svg": "/shenaniganthology/static/media/duck.bcfc437eeb2165ecd81bac0791fd6b19.svg",
     "index.html": "/shenaniganthology/index.html",
     "main.b75b7712.css.map": "/shenaniganthology/static/css/main.b75b7712.css.map",
-    "main.848d7f8f.js.map": "/shenaniganthology/static/js/main.848d7f8f.js.map",
+    "main.3c7e66ac.js.map": "/shenaniganthology/static/js/main.3c7e66ac.js.map",
     "787.699c3cfa.chunk.js.map": "/shenaniganthology/static/js/787.699c3cfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b75b7712.css",
-    "static/js/main.848d7f8f.js"
+    "static/js/main.3c7e66ac.js"
   ]
 }
