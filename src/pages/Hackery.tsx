@@ -37,32 +37,29 @@ const Hackery: React.FC = () => {
       </div>
     );
   }
-
   return (
-    <div>
-      <h1
-        style={{
-          borderBottom: "var(--color-hover) 1px dashed",
-          margin: 0,
-          padding: "10px",
-        }}
-      >
-        failing early and often
-      </h1>
+    table && (
       <div className={styles.hackeryContent}>
-        <div style={{ borderRight: "var(--color-hover) 1px dashed" }}>
-          <h2 style={{ marginBottom: 0, paddingRight: "50px" }}>
+        <h1
+          style={{
+            borderBottom: "var(--color-hover) 1px dashed",
+          }}
+        >
+          failing early and often
+        </h1>
+        <div>
+          <h2 style={{ marginBottom: 0 }}>
             in writing form. but with absolutely no helpful pagination or
             anything
           </h2>
-          {table && pageList()}
+          {pageList()}
         </div>
-        <div>
-          <h2>in project form. if there were projects to put here</h2>there
-          aren't though
-        </div>
+        {/* <div>
+            <h2>in project form. if there were projects to put here</h2>there
+            aren't though
+          </div> */}
       </div>
-    </div>
+    )
   );
 };
 

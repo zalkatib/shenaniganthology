@@ -30,6 +30,7 @@ body {
 * https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=06303a&secondary.color=4ca492&primary.text.color=f1f1f1&secondary.text.color=000814
 *  main-light: #f5f5f6;
 *  main-dark: #06303a;
+*  main-dark, iteration 2: #00322a;
 *  lightest: #eeeeee;
 *  blues:
 *   primary: #06303a;
@@ -54,8 +55,8 @@ body {
 }
 
 body.dark {
-  --color-background: #06303a;
-  --color-foreground: #f1f1f1b8;
+  --color-background: #00322a;
+  --color-foreground: #f1f1f173;
   --color-hover: #a8cdc2;
   --color-button: #107564;
   --color-code-background: #06242b;

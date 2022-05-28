@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import logo from "./assets/duck.svg";
 import ColorSchemeToggle from "./components/ColorSchemeToggle";
 import Hackery from "./pages/Hackery";
@@ -13,6 +13,9 @@ const App: React.FC = () => {
       <div className={styles.container}>
         <ColorSchemeToggle />
         <div className={styles.main}>
+          <Link to="/">
+            <h1 className={styles.title}>hello world</h1>
+          </Link>
           <Switch>
             <Route key={0} exact path="/">
               <Main />
