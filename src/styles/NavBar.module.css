@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--color-button);
+}
+
+.title a,
+.links a {
+  color: var(--color-button);
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active,
+.links a:hover,
+.links a:focus,
+.links a:active {
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  font-size: 20px;
+  margin-left: 10px;
+}

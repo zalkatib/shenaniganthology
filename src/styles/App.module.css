@@ -1,3 +1,18 @@
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
+.footer {
+  padding: 2rem 1rem;
+  border-top: 1px dashed var(--color-hover);
+  background: var(--color-background);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .ducklogo {
     animation: duck-logo-spin infinite 3s linear;
@@ -17,52 +32,6 @@
   }
 }
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-}
-.container {
-  padding: 0 2rem;
-  flex: 1 0 auto;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer {
-  padding: 2rem 1rem;
-  border-top: 1px dashed var(--color-hover);
-  justify-content: left;
-  align-items: center;
-  background: var(--color-background);
-  width: 100%;
-  flex-shrink: 0;
-}
-
-.title a,
-.main a {
-  color: var(--color-button);
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active,
-.main a:hover,
-.main a:focus,
-.main a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 2rem;
-  font-family: "Courier New", Courier, monospace;
-  color: var(--color-button);
-}
 
 .description {
   margin: 1.4rem 0 2.5rem;
@@ -70,42 +39,8 @@ body {
   font-size: 1.7rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .hackeryContent {
-    width: -webkit-fill-available !important;
-  }
-}
-
-.notionContent {
-  padding: 0 50px 50px 10px;
-  color: var(--color-foreground) !important;
-}
-
-figure {
-  width: 100% !important;
-  padding: 10px !important;
-}
-
-.hackeryContent {
-  height: 100%;
-  width: 70%;
-  margin: auto 20px;
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
 }
