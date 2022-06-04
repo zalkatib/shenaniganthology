@@ -58,7 +58,7 @@ const Hackery: React.FC = () => {
             <h2>in project form. if there were projects to put here</h2>there
             aren't though
           </div> */}
-        <div className={styles.notContent} />
+        {/* <div className={styles.notContent}></div> */}
       </div>
     )
   );
