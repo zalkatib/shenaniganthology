@@ -2,29 +2,8 @@ import * as React from "react";
 import { loadNotionContent } from "../utils/utils";
 import { NotionRenderer } from "react-notion";
 import "react-notion/src/styles.css";
-import styled from "styled-components";
+import styles from "./styles/NotionPage.module.scss";
 import hljs from "highlight.js";
-
-const Content = styled.div`
-  .notion {
-    color: var(--color-foreground) !important;
-    font-size: 14px;
-    a {
-      color: var(--color-foreground);
-    }
-    .notion-code {
-      background-color: var(--color-code-background);
-      padding: 0;
-      & code {
-        padding: 20px;
-      }
-    }
-    .notion-inline-code,
-    .notion-inline-code .notion-link {
-      color: var(--color-code-highlight) !important;
-    }
-  }
-`;
 
 const NotionPage: React.FC<{ pageId }> = ({ pageId }) => {
   const [loading, setLoading] = React.useState(null);
@@ -47,10 +26,10 @@ const NotionPage: React.FC<{ pageId }> = ({ pageId }) => {
   }, [loading, loadPage]);
 
   return (
-    <Content>
+    <div className={styles.container}>
       {hljs.highlightAll()}
       {page && <NotionRenderer blockMap={page} />}
-    </Content>
+    </div>
   );
 };
 

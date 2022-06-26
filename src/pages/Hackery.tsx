@@ -1,7 +1,7 @@
 import * as React from "react";
 import NotionPage from "../components/NotionPage";
 import { loadNotionContent } from "../utils/utils";
-import styles from "../styles/Hackery.module.css";
+import styles from "./styles/Hackery.module.css";
 
 const Hackery: React.FC = () => {
   const tableId =
