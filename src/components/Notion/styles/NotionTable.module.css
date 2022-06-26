@@ -1,0 +1,4 @@
+.notionTable {
+  display: grid;
+  flex-direction: row;
+}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { loadNotionContent } from "../utils/utils";
+import { loadNotionContent } from "../../utils/utils";
 import { NotionRenderer } from "react-notion";
 import "react-notion/src/styles.css";
 import styles from "./styles/NotionPage.module.scss";

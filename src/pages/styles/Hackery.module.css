@@ -1,31 +1,24 @@
 .container {
-  margin: 10px auto;
+  margin: 10px;
   height: 100%;
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
   background-image: url("data:image/svg+xml,<svg width='90px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='30px' y='80px' font-size='25px' clip-path='url(%23emojiClipPath)'>💻</text></svg>"),
     url("data:image/svg+xml,<svg width='85px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='0px' y='30px' font-size='25px' clip-path='url(%23emojiClipPath)'>⌨</text></svg>");
 }
+
 .content {
   background-color: var(--color-background);
-  width: 70%;
-  padding: 30px;
-  margin-top: 30px;
+  width: 75%;
+  padding: 10px;
+  margin: 30px;
   font-size: 12px;
 }
 
 .notContent {
   flex-grow: 1;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 @media (max-width: 600px) {
@@ -38,13 +31,6 @@
   }
 }
 
-.notionContent {
-  padding: 0 50px 50px 10px;
-  color: var(--color-foreground) !important;
-}
-
 figure {
-  /* width: 100% !important; */
   padding: 10px !important;
 }
-

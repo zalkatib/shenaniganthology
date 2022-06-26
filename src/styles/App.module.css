@@ -4,7 +4,9 @@ body {
 }
 
 .container {
+  display: flex;
   flex: 1 0 auto;
+  flex-flow: column;
 }
 
 .footer {
@@ -31,7 +33,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 
 .description {
   margin: 1.4rem 0 2.5rem;
