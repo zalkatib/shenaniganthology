@@ -1,11 +1,15 @@
 import * as React from "react";
+import { useLocation } from "react-router-dom";
 import { loadNotionContent } from "../../utils/utils";
 import { NotionRenderer } from "react-notion";
 import "react-notion/src/styles.css";
 import styles from "./styles/NotionPage.module.scss";
 import hljs from "highlight.js";
 
-const NotionPage: React.FC<{ pageId }> = ({ pageId }) => {
+const NotionPage = () => {
+  const location = useLocation();
+  const pageId = location.state.pageId;
+
   const [loading, setLoading] = React.useState(null);
   const [page, setPage] = React.useState(null);
 
@@ -13,7 +17,6 @@ const NotionPage: React.FC<{ pageId }> = ({ pageId }) => {
     setLoading(true);
     loadNotionContent("page", pageId)
       .then((res) => {
-        console.log(res);
         setPage(res.data);
       })
       .finally(() => {

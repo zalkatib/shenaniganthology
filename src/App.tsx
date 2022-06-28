@@ -6,6 +6,7 @@ import Main from "./pages/Main";
 import Musings from "./pages/Musings";
 import styles from "./styles/App.module.css";
 import NavBar from "./components/NavBar";
+import NotionPage from "./components/Notion/NotionPage";
 
 const App: React.FC = () => {
   return (
@@ -13,13 +14,14 @@ const App: React.FC = () => {
       <div className={styles.container}>
         <NavBar />
         <Switch>
-          <Route key={0} exact path="/">
+          <Route exact path="/">
             <Main />
           </Route>
-          <Route key={1} path="/hackery">
+          <Route path="/hackery">
             <Hackery />
           </Route>
-          <Route key={3} path="/musings">
+          <Route path="/:pageName" component={NotionPage} />
+          <Route path="/musings">
             <Musings />
           </Route>
         </Switch>

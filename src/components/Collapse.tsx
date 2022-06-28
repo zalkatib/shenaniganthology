@@ -1,12 +1,12 @@
 import * as React from "react";
-import styles from "./styles/GridItem.module.scss";
+import styles from "./styles/Collapse.module.scss";
 
-interface GridItemProps {
+interface CollapseProps {
   header: string;
   collapsed: boolean;
 }
 
-const GridItem: React.FC<GridItemProps> = ({ header, collapsed, children }) => {
+const Collapse: React.FC<CollapseProps> = ({ header, collapsed, children }) => {
   const [isCollapsed, setIsCollapsed] = React.useState(collapsed);
   return (
     <div className={styles.container}>
@@ -28,4 +28,4 @@ const GridItem: React.FC<GridItemProps> = ({ header, collapsed, children }) => {
   );
 };
 
-export default GridItem;
+export default Collapse;
