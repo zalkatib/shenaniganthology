@@ -5,9 +5,10 @@ import styles from "./styles/NotionTable.module.scss";
 
 interface NotionTableProps {
   tableId: string;
+  origin: string;
 }
 
-const NotionTable: React.FC<NotionTableProps> = ({ tableId }) => {
+const NotionTable: React.FC<NotionTableProps> = ({ tableId, origin }) => {
   const [loadingTable, setLoadingTable] = React.useState(null);
   const [table, setTable] = React.useState(null);
 
@@ -33,7 +34,7 @@ const NotionTable: React.FC<NotionTableProps> = ({ tableId }) => {
         {table.map((item) => (
           <Link
             to={{
-              pathname: `/${item.name.replaceAll(" ", "-")}`,
+              pathname: `/page/${item.name.replaceAll(" ", "-")}`,
               state: {
                 pageId: item.id,
               },

@@ -17,13 +17,13 @@ const App: React.FC = () => {
           <Route exact path="/">
             <Main />
           </Route>
-          <Route path="/hackery">
+          {/* <Route path="/hackery">
             <Hackery />
-          </Route>
-          <Route path="/:pageName" component={NotionPage} />
+          </Route> */}
+          {/* <Route path="/page/:pageName" component={NotionPage} />
           <Route path="/musings">
             <Musings />
-          </Route>
+          </Route> */}
         </Switch>
       </div>
       <footer className={styles.footer}>

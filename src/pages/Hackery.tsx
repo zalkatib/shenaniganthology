@@ -18,7 +18,7 @@ const Hackery: React.FC = () => {
           failing early and often
         </h1>
         <h4>and here is the proof</h4>
-        <NotionTable tableId={tableId} />
+        <NotionTable tableId={tableId} origin="hackery" />
       </div>
     </div>
   );
