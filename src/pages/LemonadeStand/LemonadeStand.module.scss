@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.duck {
+  position: relative;
+  width: 200px;
+  flex-grow: 1;
+}
+
+.transformX {
+  transform: scaleX(-1);
+}
+.grapes {
+  font-size: 25px;
+  margin: 20px;
+  height: 30px;
+}

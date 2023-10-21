@@ -1,35 +1,30 @@
-import * as React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from "./assets/duck.svg";
-import Hackery from "./pages/Hackery";
-import Main from "./pages/Main";
-import Musings from "./pages/Musings";
-import styles from "./styles/App.module.css";
-import NavBar from "./components/NavBar";
-import NotionPage from "./components/Notion/NotionPage";
+import { FunctionComponent } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-const App: React.FC = () => {
+import { Main } from './pages/Main';
+import { LemonadeStand } from './pages/LemonadeStand';
+import { NavBar } from './components/NavBar';
+
+import logo from './assets/duck.svg';
+import styles from './styles/App.module.scss';
+
+export const App: FunctionComponent = () => {
   return (
-    <Router basename="/shenaniganthology">
+    <Router basename='/shenaniganthology'>
       <div className={styles.container}>
         <NavBar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <Main />
           </Route>
-          {/* <Route path="/hackery">
-            <Hackery />
-          </Route> */}
-          {/* <Route path="/page/:pageName" component={NotionPage} />
-          <Route path="/musings">
-            <Musings />
-          </Route> */}
+          <Route exact path='/lemonadestand'>
+            <LemonadeStand />
+          </Route>
         </Switch>
       </div>
       <footer className={styles.footer}>
-        <img className={styles.ducklogo} src={logo} alt={"duck"} width={100} />
+        <img className={styles.ducklogo} src={logo} alt={'duck'} width={100} />
       </footer>
     </Router>
   );
 };
-export default App;

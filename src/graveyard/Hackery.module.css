@@ -5,8 +5,6 @@
   flex: 1;
   flex-direction: row;
   justify-content: center;
-  background-image: url("data:image/svg+xml,<svg width='90px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='30px' y='80px' font-size='25px' clip-path='url(%23emojiClipPath)'>💻</text></svg>"),
-    url("data:image/svg+xml,<svg width='85px' height='100px' xmlns='http://www.w3.org/2000/svg'><text x='0px' y='30px' font-size='25px' clip-path='url(%23emojiClipPath)'>⌨</text></svg>");
 }
 
 .content {

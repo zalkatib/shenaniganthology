@@ -1,21 +1,24 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
-import { loadNotionContent } from "../../utils/utils";
-import styles from "./styles/NotionTable.module.scss";
+import { FunctionComponent, useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import { loadNotionContent } from '../utils';
+
+import styles from './NotionTable.module.scss';
 
 interface NotionTableProps {
   tableId: string;
   origin: string;
 }
 
-const NotionTable: React.FC<NotionTableProps> = ({ tableId, origin }) => {
-  const [loadingTable, setLoadingTable] = React.useState(null);
-  const [table, setTable] = React.useState(null);
+const NotionTable: FunctionComponent<NotionTableProps> = ({ tableId, origin }) => {
+  const [loadingTable, setLoadingTable] = useState(null);
+  const [table, setTable] = useState(null);
 
-  const loadTable = React.useCallback(() => {
+  const loadTable = useCallback(() => {
     setLoadingTable(true);
-    loadNotionContent("table", tableId)
-      .then((res) => {
+
+    loadNotionContent('table', tableId)
+      .then(res => {
         setTable(res.data);
       })
       .finally(() => {
@@ -23,7 +26,7 @@ const NotionTable: React.FC<NotionTableProps> = ({ tableId, origin }) => {
       });
   }, [tableId]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (loadingTable === null) loadTable();
   }, [table, loadingTable, loadTable]);
 
@@ -31,15 +34,14 @@ const NotionTable: React.FC<NotionTableProps> = ({ tableId, origin }) => {
   return (
     table && (
       <div className={styles.notionTable}>
-        {table.map((item) => (
+        {table.map(item => (
           <Link
             to={{
-              pathname: `/page/${item.name.replaceAll(" ", "-")}`,
+              pathname: `/page/${item.name.replaceAll(' ', '-')}`,
               state: {
                 pageId: item.id,
               },
-            }}
-          >
+            }}>
             <div className={styles.tableItem}>{item.name}</div>
           </Link>
         ))}
