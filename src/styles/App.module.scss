@@ -13,11 +13,18 @@ body {
   padding: 2rem 1rem;
   border-top: 1px dashed var(--color-hover);
   background: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .ducklogo {
-    animation: duck-logo-spin infinite 3s linear;
+    animation: spin infinite 2s linear;
+  }
+
+  .reverse {
+    animation: reverse-spin infinite 2s linear;
   }
 
   .ducklogo:hover {
@@ -25,12 +32,33 @@ body {
   }
 }
 
-@keyframes duck-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fall {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
